@@ -1,5 +1,4 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 
 class AppController extends ChangeNotifier {
   static AppController instance = new AppController();
@@ -10,6 +9,8 @@ class AppController extends ChangeNotifier {
     // muda o valor da variável
     isDarkTheme = !isDarkTheme;
     notifyListeners();
-    print('mudou tema');
+    if (kDebugMode) {
+      print('mudou tema');
+    }
   }
 }

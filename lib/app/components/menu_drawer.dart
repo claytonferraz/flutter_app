@@ -1,5 +1,3 @@
-import 'package:flutter/widgets.dart';
-
 import 'package:flutter/material.dart';
 
 class MenuDrawer extends StatelessWidget {
@@ -16,6 +14,27 @@ class MenuDrawer extends StatelessWidget {
             accountName: const Text('accountName'),
             accountEmail: const Text('accountEmail'),
           ),
+          ListTile(
+            leading: const Icon(Icons.home),
+            title: const Text("Home"),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed('/home');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text("Perfil"),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed('/perfil');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.logout),
+            title: const Text("Sair"),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed('/');
+            },
+          )
         ],
       ),
     );

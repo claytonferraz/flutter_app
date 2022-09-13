@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/controller/app.dart';
+import 'package:flutter_app/app/pages/home.dart';
+import 'package:flutter_app/app/pages/login.dart';
+import 'package:flutter_app/app/pages/perfil.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -10,11 +13,17 @@ class AppWidget extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primaryColor: Colors.green,
+            primaryColor: Color.fromARGB(255, 44, 161, 49),
             brightness: AppController.instance.isDarkTheme
                 ? Brightness.dark
                 : Brightness.light,
           ),
+          initialRoute: "/",
+          routes: {
+            '/': (context) => HomePage(),
+            '/home': (context) => HomePage(),
+            '/perfil': (context) => PerfilPage(),
+          },
         );
       },
     );
