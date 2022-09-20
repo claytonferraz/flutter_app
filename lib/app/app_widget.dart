@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/controller/app.dart';
+import 'package:flutter_app/app/components/theme_data.dart';
 import 'package:flutter_app/app/pages/home.dart';
 import 'package:flutter_app/app/pages/login.dart';
 import 'package:flutter_app/app/pages/perfil.dart';
@@ -20,7 +21,7 @@ class AppWidget extends StatelessWidget {
           ),
           initialRoute: "/",
           routes: {
-            '/': (context) => HomePage(),
+            '/': (context) => LoginPage(),
             '/home': (context) => HomePage(),
             '/perfil': (context) => PerfilPage(),
           },
